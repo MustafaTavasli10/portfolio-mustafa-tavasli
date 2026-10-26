@@ -1,0 +1,119 @@
+:root {
+    --bg-color: #F0F4F8;        /* Lichtijsblauwe achtergrond voor een frisse look */
+    --card-bg: #FFFFFF;         /* Witte kaartjes voor projecten en skills */
+    --primary-red: #D9381E;      /* Rood voor de hoofdknoppen */
+    --accent-orange: #FF6B35;   /* Oranje voor hover-effecten en accenten */
+    --text-color: #1D2D44;      /* Donkerblauw voor de tekst (leest beter dan hard zwart) */
+    --border-color: #CBD5E1;    /* Subtiel randje */
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: var(--card-bg);
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+nav a:hover, nav a.active{
+    color: var(--accent-orange);
+}
+
+
+.hero{
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--card-bg);
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.hero h1{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.btn{
+    display: inline-block;
+    background-color: var(--primary-red);
+    color: #FFFFFF;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2 ease;
+}
+
+.btn:hover{
+    background-color: var(--accent-orange);
+}
+
+
+.skills-preview{
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill-box{
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-box:hover{
+    transform: translateY(-3px);
+    border-color: var(--accent-orange);
+}
+
+footer{
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
